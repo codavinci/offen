@@ -29,8 +29,11 @@
     "uuid": "^3.3.2"
   },
   "devDependencies": {
+    "@babel/core": "^7.12.10",
+    "@babel/preset-env": "^7.12.11",
     "@offen/l10nify": "^0.2.0",
     "@offen/schemaify": "^0.1.0",
+    "babelify": "^10.0.0",
     "browserify": "^16.2.3",
     "budo": "^11.6.3",
     "dependency-check": "^3.4.0",
@@ -48,7 +51,7 @@
     "mochify": "^6.2.0",
     "npm-license-crawler": "^0.2.1",
     "sinon": "^7.3.2",
-    "standard": "^14.3.1",
+    "standard": "^16.0.3",
     "tinyify": "^2.5.1",
     "uglifyify": "^5.0.2",
     "vinyl-buffer": "^1.0.1",
@@ -57,14 +60,15 @@
   "browserify": {
     "transform": [
       "@offen/schemaify",
+      "nanohtml",
+      "babelify",
       "envify",
       [
         "@offen/l10nify",
         {
           "locale": "en"
         }
-      ],
-      "nanohtml"
+      ]
     ]
   },
   "standard": {
