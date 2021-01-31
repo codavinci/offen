@@ -119,7 +119,7 @@ const RangeSelector = (props) => {
                 invert={explainerActive}
                 marginLeft
               />
-            )
+              )
             : null}
         </h4>
         {explainerActive
@@ -127,7 +127,7 @@ const RangeSelector = (props) => {
             <p class='mw7 ma0 pv2'>
               {__('Here you can set the time frame for all displayed metrics. As all data is generally deleted after 6 months, the selection is limited to this duration.')}
             </p>
-          )
+            )
           : null}
       </div>
       <ul class='flex flex-wrap list pa0 mh0 mt3 mb3 grow-list b--light-gray'>
@@ -140,7 +140,7 @@ const RangeSelector = (props) => {
             to={to}
             onClose={() => setShowDatepicker(false)}
           />
-        )
+          )
         : null}
     </div>
   )
