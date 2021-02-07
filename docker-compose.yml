@@ -55,6 +55,7 @@ services:
     <<: *budo_app
     working_dir: /offen/script
     environment:
+      VAULT_HOST: ''
       LOCALE: ${LOCALE:-en}
       PORT: 9966
     volumes:
