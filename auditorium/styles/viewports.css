@@ -3,9 +3,14 @@
  * SPDX-License-Identifier: Apache-2.0
  */
 
+.viewport-cf { clear: both; }
+.viewport-fl,
+.viewport-fr { float: none; }
 .viewport-main { max-width: 64rem; }
 @media screen and (min-width: 118rem) {
   .viewport-main { max-width: 96rem; }
+  .viewport-fl { float: left; }
+  .viewport-fr { float: right; }
 }
 
 .viewport-sub { width: 100%; }
